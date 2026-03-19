@@ -246,11 +246,11 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
             >
-              <Button href={BOOKING_URL} size="lg" external>
-                Book a Lesson
+              <Button href="/memberships" size="lg">
+                Become a Member
               </Button>
-              <Button href="/memberships" variant="secondary" size="lg">
-                Explore Memberships
+              <Button href={BOOKING_URL} variant="secondary" size="lg" external>
+                Book a Lesson
               </Button>
             </motion.div>
           </div>
