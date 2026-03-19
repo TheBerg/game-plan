@@ -216,8 +216,8 @@ export default function Home() {
                 <motion.span
                   key={i}
                   className={`block ${line.className}`}
-                  initial={{ opacity: 0, y: 30, clipPath: "inset(0 0 100% 0)" }}
-                  animate={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.7,
                     delay: 0.4 + i * 0.15,
