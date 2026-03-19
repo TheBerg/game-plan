@@ -23,13 +23,7 @@ export const SOCIAL = {
 };
 
 export const HOURS = [
-  { days: "Monday", hours: "7:00 AM – 7:00 PM" },
-  { days: "Tuesday", hours: "8:00 AM – 7:00 PM" },
-  { days: "Wednesday", hours: "8:00 AM – 7:00 PM" },
-  { days: "Thursday", hours: "7:00 AM – 7:00 PM" },
-  { days: "Friday", hours: "7:00 AM – 7:00 PM" },
-  { days: "Saturday", hours: "8:00 AM – 4:00 PM" },
-  { days: "Sunday", hours: "12:00 PM – 4:00 PM" },
+  { days: "Every Day", hours: "5:00 AM – 10:00 PM" },
 ];
 
 export const CITIES_SERVED = [

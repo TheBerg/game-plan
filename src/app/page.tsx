@@ -359,7 +359,7 @@ export default function Home() {
             <ServiceCard
               icon={<ChartIcon />}
               title="Practice Memberships"
-              description="Regular access to GC Quad bays, premium balls, and high-speed video review. Practice with tour-level feedback starting at $29/month."
+              description="Self-serve GC Quad bays open 5am to 10pm, every day. Unlimited practice with tour-level data starting at $79/month."
               href="/memberships"
               delay={0.1}
             />
