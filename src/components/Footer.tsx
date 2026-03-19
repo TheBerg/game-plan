@@ -30,6 +30,9 @@ export default function Footer() {
             <p className="text-brand-gray-400 text-sm mt-3 leading-relaxed">
               {SITE_TAGLINE}
             </p>
+            <p className="text-brand-gray-500 text-xs mt-2">
+              Locally owned small business in San Marcos, CA
+            </p>
             <div className="flex gap-3 mt-4">
               <a
                 href={SOCIAL.instagram}

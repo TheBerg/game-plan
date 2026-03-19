@@ -208,7 +208,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              San Marcos, CA
+              Locally Owned in San Marcos, CA
             </motion.span>
 
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
@@ -274,12 +274,22 @@ export default function Home() {
       {/* ─── Credibility Bar ─── */}
       <section className="bg-brand-gray-950 border-y border-brand-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-brand-gray-800">
+          <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-brand-gray-800">
+            <CredBadge
+              icon={
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1" />
+                </svg>
+              }
+              label="Locally Owned"
+              sublabel="Small business, not a franchise"
+              delay={0}
+            />
             <CredBadge
               icon={<span className="font-heading font-bold text-sm">F</span>}
               label="Featured in Forbes"
               sublabel="August 2025"
-              delay={0}
+              delay={0.05}
             />
             <CredBadge
               icon={
@@ -295,13 +305,13 @@ export default function Home() {
               icon={<CrosshairIcon />}
               label="GC Quad Technology"
               sublabel="PGA Tour standard"
-              delay={0.2}
+              delay={0.15}
             />
             <CredBadge
               icon={<ActivityIcon />}
               label="TPI Certified"
               sublabel="Level 2 Fitness & Power"
-              delay={0.3}
+              delay={0.2}
             />
           </div>
         </div>

@@ -27,10 +27,11 @@ export default function AboutPage() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="mt-6 text-lg md:text-xl text-brand-gray-300 leading-relaxed">
-                Game Plan Golf Performance exists because most golfers deserve
-                better than guesswork. We built a facility around a simple idea:
-                measure everything, coach from the data, and give every golfer
-                access to the same tools the pros use.
+                Game Plan Golf Performance is a locally owned, independent
+                facility in San Marcos — not a franchise, not a chain. We
+                built this place around a simple idea: measure everything,
+                coach from the data, and give every golfer access to the same
+                tools the pros use.
               </p>
             </FadeIn>
           </div>
@@ -215,21 +216,21 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="The Facility"
-            title="A Performance Facility, Not a Simulator Bar"
-            description="Game Plan is an appointment-based, fully staffed golf performance center. Every session is coached or supported. This isn't a place to grab a beer and hit balls — it's where you come to get better."
+            title="Locally Owned. Not a Franchise."
+            description="Game Plan is an independent, locally owned golf performance facility — not a franchise simulator bar. We answer to our members, not a corporate playbook. That means better equipment, personal attention, and a facility built for serious golfers."
           />
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {[
               {
-                title: "Appointment-Based",
+                title: "Independent & Local",
                 description:
-                  "Every session is scheduled. No walk-up crowds, no waiting for a bay. Your time is your time.",
+                  "Owned and operated right here in San Marcos. Every decision is made for our members, not a franchise headquarters.",
               },
               {
-                title: "Fully Staffed",
+                title: "GC Quad, Not Trackman",
                 description:
-                  "A trained professional is always present. Whether you're in a lesson or a practice session, support is available.",
+                  "We chose GC Quad for its optical accuracy on ball data — the same technology used on the PGA Tour. Not the cheapest option, the best one.",
               },
               {
                 title: "Professional Environment",
