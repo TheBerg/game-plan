@@ -9,6 +9,7 @@ const membership = {
   period: "/mo",
   features: [
     "Up to 2 hours of GC Quad bay time per day",
+    "Up to 2 hours of private gym time per day",
     "Open 5:00 AM – 10:00 PM, every day",
     "Full launch monitor data",
     "Premium range balls included",
