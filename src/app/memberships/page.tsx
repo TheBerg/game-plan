@@ -1,7 +1,6 @@
 "use client";
 
 import FadeIn from "@/components/FadeIn";
-import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 import { MEMBERSHIP_URL, BOOKING_URL } from "@/lib/constants";
 
@@ -163,63 +162,6 @@ export default function MembershipsPage() {
               </Button>
             </div>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* SIM Rental */}
-      <section className="py-20 md:py-28 bg-brand-darker">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <SectionHeader
-                eyebrow="Drop-In Option"
-                title="Bay Rental — No Membership Required"
-                description="Not ready to commit? Rent a GC Quad bay by the hour. Walk in, hit balls with tour-level data, and see what you've been missing."
-                align="left"
-              />
-              <FadeIn delay={0.2}>
-                <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-6 inline-block">
-                  <p className="text-brand-gray-400 text-sm">
-                    Hourly Bay Rental
-                  </p>
-                  <p className="font-heading text-3xl font-bold text-white mt-1">
-                    $60<span className="text-brand-gray-400 text-base font-normal">/hour</span>
-                  </p>
-                  <p className="text-brand-gray-500 text-xs mt-2">
-                    Includes GC Quad data &amp; premium balls
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <div className="mt-6">
-                  <Button href={BOOKING_URL} variant="secondary" external>
-                    Reserve a Bay
-                  </Button>
-                </div>
-              </FadeIn>
-            </div>
-            <FadeIn delay={0.2} direction="right">
-              <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-8">
-                <h3 className="font-heading text-xl font-bold text-white mb-4">
-                  What&apos;s Included
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    "Full GC Quad launch monitor data",
-                    "Premium range balls",
-                    "Climate-controlled bay",
-                    "Multiple course simulations available",
-                    "No booking fee — just show up on time",
-                  ].map((item) => (
-                    <li key={item} className="flex gap-3 text-sm">
-                      <CheckIcon />
-                      <span className="text-brand-gray-200">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </FadeIn>
-          </div>
         </div>
       </section>
 
