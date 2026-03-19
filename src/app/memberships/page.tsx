@@ -40,7 +40,7 @@ export default function MembershipsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-brand-dark">
+      <section className="pt-32 pb-4 md:pt-40 md:pb-6 bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <span className="inline-block text-brand-green text-sm font-semibold tracking-widest uppercase mb-4">
@@ -62,7 +62,7 @@ export default function MembershipsPage() {
       </section>
 
       {/* Membership */}
-      <section className="py-12 md:py-20 bg-brand-dark">
+      <section className="py-8 md:py-12 bg-brand-dark">
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="bg-brand-green/5 border-2 border-brand-green rounded-lg p-8 md:p-10 text-center">
