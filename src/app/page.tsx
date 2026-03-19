@@ -235,9 +235,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
             >
-              GC Quad launch monitors. Force plates. High-speed video. Every
-              session at Game Plan is built on real numbers — so your
-              improvement is measurable, not theoretical.
+              GC Quad launch monitors. High-speed video. Real data on every
+              shot. Every session at Game Plan is built on real numbers — so
+              your improvement is measurable, not theoretical.
             </motion.p>
 
             <motion.div
@@ -368,8 +368,8 @@ export default function Home() {
                   },
                   {
                     icon: <ActivityIcon />,
-                    title: "Force Plates",
-                    desc: "Ground reaction force data shows how you load, shift, and deliver power through the ground. The foundation of every efficient swing.",
+                    title: "Shot-by-Shot Tracking",
+                    desc: "Every ball you hit generates data — distance, dispersion, consistency trends. Track your progress over time and see exactly where your game is improving.",
                   },
                   {
                     icon: <DumbbellIcon />,

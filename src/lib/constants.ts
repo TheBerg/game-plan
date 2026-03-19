@@ -1,7 +1,7 @@
 export const SITE_NAME = "Game Plan Golf Performance";
 export const SITE_TAGLINE = "We don't guess — we measure.";
 export const SITE_DESCRIPTION =
-  "Data-driven golf coaching, practice memberships, and athletic training in San Marcos, CA. Powered by GC Quad launch monitors, force plates, and high-speed video.";
+  "Data-driven golf coaching, practice memberships, and athletic training in San Marcos, CA. Powered by GC Quad launch monitors and high-speed video.";
 
 export const BOOKING_URL = "https://example.com/book"; // [REPLACE] Replace with actual booking system URL
 export const MEMBERSHIP_URL = "https://example.com/memberships"; // [REPLACE] Replace with actual membership signup URL
