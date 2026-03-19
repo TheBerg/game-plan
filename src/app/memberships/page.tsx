@@ -9,7 +9,7 @@ const membership = {
   price: "$149",
   period: "/mo",
   features: [
-    "Unlimited GC Quad bay sessions",
+    "Up to 2 hours of GC Quad bay time per day",
     "Open 5:00 AM – 10:00 PM, every day",
     "Full launch monitor data",
     "Premium range balls included",
@@ -78,7 +78,7 @@ export default function MembershipsPage() {
                 </span>
               </div>
               <p className="text-brand-gray-300 mt-4">
-                Unlimited access. Every day. No session limits.
+                Up to 2 hours per day. Every day. No monthly limits.
               </p>
 
               <ul className="mt-8 space-y-3 text-left max-w-sm mx-auto">
