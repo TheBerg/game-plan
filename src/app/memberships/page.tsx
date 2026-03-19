@@ -110,6 +110,41 @@ export default function MembershipsPage() {
         </div>
       </section>
 
+      {/* No-contract callout */}
+      <section className="py-16 md:py-20 bg-brand-darker">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+                No Contracts. No Pressure. No Gimmicks.
+              </h2>
+              <p className="text-brand-gray-300 text-lg max-w-2xl mx-auto mb-10">
+                We don&apos;t lock you in and we don&apos;t upsell you at the door.
+                Pay month to month, cancel anytime, and keep every dollar focused
+                on getting better at golf.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-6">
+              <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-6 text-center">
+                <div className="text-brand-green text-3xl font-heading font-bold mb-2">$0</div>
+                <p className="text-white font-semibold text-sm">Cancellation Fee</p>
+                <p className="text-brand-gray-400 text-xs mt-1">Walk away whenever you want</p>
+              </div>
+              <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-6 text-center">
+                <div className="text-brand-green text-3xl font-heading font-bold mb-2">$0</div>
+                <p className="text-white font-semibold text-sm">Sign-Up Fee</p>
+                <p className="text-brand-gray-400 text-xs mt-1">No initiation, no hidden costs</p>
+              </div>
+              <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-6 text-center">
+                <div className="text-brand-green text-3xl font-heading font-bold mb-2">0</div>
+                <p className="text-white font-semibold text-sm">Year Commitment</p>
+                <p className="text-brand-gray-400 text-xs mt-1">Month to month, always</p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Lessons callout */}
       <section className="py-16 bg-brand-green/5 border-y border-brand-green/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
