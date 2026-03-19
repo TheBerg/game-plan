@@ -14,6 +14,7 @@ const membership = {
     "Full launch monitor data",
     "Premium range balls included",
     "Online booking access",
+    "No contract — cancel anytime",
   ],
 };
 
@@ -66,6 +67,9 @@ export default function MembershipsPage() {
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="bg-brand-green/5 border-2 border-brand-green rounded-lg p-8 md:p-10 text-center">
+              <span className="inline-block bg-brand-green/10 text-brand-green text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                No Contract — Cancel Anytime
+              </span>
               <h3 className="font-heading text-lg font-bold text-white uppercase tracking-wider">
                 Practice Membership
               </h3>
