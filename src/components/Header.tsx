@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "./Button";
-import { NAV_LINKS, BOOKING_URL } from "@/lib/constants";
+import { NAV_LINKS, BOOKING_URL, MEMBER_LOGIN_URL } from "@/lib/constants";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +18,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
@@ -41,7 +40,7 @@ export default function Header() {
             href="/"
             className="font-heading font-bold text-lg md:text-xl text-white tracking-tight"
           >
-            {/* [REPLACE] Replace with actual logo image: <Image src="/images/logo.svg" alt="Game Plan Golf Performance" width={180} height={40} /> */}
+            {/* [REPLACE] Replace with actual logo image */}
             <span className="text-brand-green">Game Plan</span>{" "}
             <span className="hidden sm:inline">Golf Performance</span>
           </Link>
@@ -63,8 +62,16 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop CTAs */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href={MEMBER_LOGIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-brand-gray-300 hover:text-white transition-colors"
+            >
+              Member Login
+            </a>
             <Button href={BOOKING_URL} size="sm" external>
               Book a Lesson
             </Button>
@@ -128,6 +135,14 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+              <a
+                href={MEMBER_LOGIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-3 text-base font-medium text-brand-gray-300 hover:text-white hover:bg-white/5 rounded transition-colors"
+              >
+                Member Login
+              </a>
               <div className="pt-3">
                 <Button
                   href={BOOKING_URL}
