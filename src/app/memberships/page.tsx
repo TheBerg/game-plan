@@ -5,71 +5,17 @@ import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 import { MEMBERSHIP_URL, BOOKING_URL } from "@/lib/constants";
 
-const tiers = [
-  {
-    name: "Off-Peak",
-    price: "$79",
-    period: "/mo",
-    description: "Unlimited bay access during off-peak hours. Perfect for flexible schedules.",
-    hours: "9am – 2pm daily",
-    features: [
-      "Unlimited GC Quad bay sessions",
-      "Access 9:00 AM – 2:00 PM daily",
-      "Full launch monitor data",
-      "Premium range balls included",
-    ],
-    cta: "Join Off-Peak",
-    highlighted: false,
-  },
-  {
-    name: "Gym Only",
-    price: "$79",
-    period: "/mo",
-    description: "Full gym access, all hours. Train your body for better golf.",
-    hours: "5am – 10pm daily",
-    features: [
-      "Gym access all hours",
-      "Golf-specific training equipment",
-      "Open 5:00 AM – 10:00 PM daily",
-    ],
-    cta: "Join Gym",
-    highlighted: false,
-  },
-  {
-    name: "Standard",
-    price: "$149",
-    period: "/mo",
-    description: "Unlimited bay access, all hours. The full practice experience.",
-    hours: "5am – 10pm daily",
-    features: [
-      "Unlimited GC Quad bay sessions",
-      "All hours — 5:00 AM – 10:00 PM daily",
-      "Full launch monitor data",
-      "Premium range balls included",
-      "Online booking access",
-    ],
-    cta: "Join Standard",
-    highlighted: false,
-  },
-  {
-    name: "Performance",
-    price: "$199",
-    period: "/mo",
-    description: "Everything. Unlimited bays plus full gym access.",
-    hours: "5am – 10pm daily",
-    features: [
-      "Unlimited GC Quad bay sessions",
-      "All hours — 5:00 AM – 10:00 PM daily",
-      "Full launch monitor data",
-      "Premium range balls included",
-      "Full gym access",
-      "Online booking access",
-      "1 guest pass per month",
-    ],
-    cta: "Join Performance",
-    highlighted: true,
-  },
-];
+const membership = {
+  price: "$149",
+  period: "/mo",
+  features: [
+    "Unlimited GC Quad bay sessions",
+    "Open 5:00 AM – 10:00 PM, every day",
+    "Full launch monitor data",
+    "Premium range balls included",
+    "Online booking access",
+  ],
+};
 
 function CheckIcon() {
   return (
@@ -115,68 +61,48 @@ export default function MembershipsPage() {
         </div>
       </section>
 
-      {/* Pricing Tiers */}
+      {/* Membership */}
       <section className="py-12 md:py-20 bg-brand-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tiers.map((tier, i) => (
-              <FadeIn key={tier.name} delay={0.1 * i}>
-                <div
-                  className={`rounded-lg p-6 md:p-8 h-full flex flex-col ${
-                    tier.highlighted
-                      ? "bg-brand-green/5 border-2 border-brand-green relative"
-                      : "bg-brand-gray-950 border border-brand-gray-800"
-                  }`}
+        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="bg-brand-green/5 border-2 border-brand-green rounded-lg p-8 md:p-10 text-center">
+              <h3 className="font-heading text-lg font-bold text-white uppercase tracking-wider">
+                Practice Membership
+              </h3>
+              <div className="mt-4 flex items-baseline justify-center">
+                <span className="font-heading text-5xl md:text-6xl font-bold text-white">
+                  {membership.price}
+                </span>
+                <span className="text-brand-gray-400 text-lg ml-1">
+                  {membership.period}
+                </span>
+              </div>
+              <p className="text-brand-gray-300 mt-4">
+                Unlimited access. Every day. No session limits.
+              </p>
+
+              <ul className="mt-8 space-y-3 text-left max-w-sm mx-auto">
+                {membership.features.map((feature) => (
+                  <li key={feature} className="flex gap-3 text-sm">
+                    <CheckIcon />
+                    <span className="text-brand-gray-200">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8">
+                <Button
+                  href={MEMBERSHIP_URL}
+                  variant="primary"
+                  size="lg"
+                  className="w-full"
+                  external
                 >
-                  {tier.highlighted && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-green text-brand-dark text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-                      Best Value
-                    </span>
-                  )}
-
-                  <div className="mb-6">
-                    <h3 className="font-heading text-lg font-bold text-white">
-                      {tier.name}
-                    </h3>
-                    <div className="mt-3 flex items-baseline">
-                      <span className="font-heading text-4xl font-bold text-white">
-                        {tier.price}
-                      </span>
-                      <span className="text-brand-gray-400 text-sm ml-1">
-                        {tier.period}
-                      </span>
-                    </div>
-                    <p className="text-brand-green text-xs font-semibold mt-2">
-                      {tier.hours}
-                    </p>
-                    <p className="text-brand-gray-400 text-sm mt-2">
-                      {tier.description}
-                    </p>
-                  </div>
-
-                  <ul className="space-y-3 flex-1">
-                    {tier.features.map((feature) => (
-                      <li key={feature} className="flex gap-3 text-sm">
-                        <CheckIcon />
-                        <span className="text-brand-gray-200">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-8">
-                    <Button
-                      href={MEMBERSHIP_URL}
-                      variant={tier.highlighted ? "primary" : "outline"}
-                      className="w-full"
-                      external
-                    >
-                      {tier.cta}
-                    </Button>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+                  Become a Member
+                </Button>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
