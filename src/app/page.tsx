@@ -318,17 +318,17 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <ServiceCard
-              icon={<TargetIcon />}
-              title="Lessons"
-              description="One-on-one coaching using GC Quad launch monitors, high-speed cameras, and force plates. Your coach builds a plan around your specific data — not generic swing tips."
-              href="/lessons"
-              delay={0}
-            />
-            <ServiceCard
               icon={<ChartIcon />}
               title="Practice Memberships"
               description="Self-serve GC Quad bays open 5am to 10pm, every day. Up to 2 hours of tour-level practice daily for $149/month."
               href="/memberships"
+              delay={0}
+            />
+            <ServiceCard
+              icon={<TargetIcon />}
+              title="Lessons"
+              description="One-on-one coaching using GC Quad launch monitors, high-speed cameras, and force plates. Your coach builds a plan around your specific data — not generic swing tips."
+              href="/lessons"
               delay={0.1}
             />
             <ServiceCard
