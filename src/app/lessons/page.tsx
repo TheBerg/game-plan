@@ -32,9 +32,9 @@ const techStack = [
     */
   },
   {
-    title: "Force Plate Technology",
+    title: "Swing Catalyst Force Plates",
     description:
-      "Embedded force plates measure ground reaction forces throughout your swing — showing how you load, transfer, and deliver power from the ground up. This data connects your physical movement to your ball flight in a way that no camera can.",
+      "Swing Catalyst dual 3D force plates measure ground reaction forces throughout your swing — showing how you load, transfer, and deliver power from the ground up. This data connects your physical movement to your ball flight in a way that no camera can. It's technology you won't find at a simulator bar.",
     stat: "Ground reaction force mapping",
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
     /*

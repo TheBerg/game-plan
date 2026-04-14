@@ -330,14 +330,14 @@ export default function Home() {
             <ServiceCard
               icon={<ChartIcon />}
               title="Practice Memberships"
-              description="Self-serve GC Quad bays open 5am to 10pm, every day. Up to 2 hours of tour-level practice daily for $149/month."
+              description="Self-serve GC Quad bays with high-speed video, open 5am to 10pm, every day. Up to 2 hours of tour-level practice daily for $149/month."
               href="/memberships"
               delay={0}
             />
             <ServiceCard
               icon={<TargetIcon />}
               title="Lessons"
-              description="One-on-one coaching using GC Quad launch monitors, high-speed cameras, and force plates. Your coach builds a plan around your specific data — not generic swing tips."
+              description="One-on-one coaching from Swing Catalyst certified instructors with professional playing experience. GC Quad data, force plates, and high-speed video — not a screen in an empty bay."
               href="/lessons"
               delay={0.1}
             />
@@ -378,8 +378,8 @@ export default function Home() {
                   },
                   {
                     icon: <ActivityIcon />,
-                    title: "Shot-by-Shot Tracking",
-                    desc: "Every ball you hit generates data — distance, dispersion, consistency trends. Track your progress over time and see exactly where your game is improving.",
+                    title: "Swing Catalyst Force Plates",
+                    desc: "Embedded force plates measure ground reaction forces throughout your swing — how you load, transfer, and deliver power from the ground up. Technology you won't find at a simulator bar.",
                   },
                   {
                     icon: <DumbbellIcon />,
@@ -440,6 +440,73 @@ export default function Home() {
               detail="Google Review"
               delay={0.2}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Why Game Plan ─── */}
+      <section className="py-20 md:py-28 bg-brand-darker">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Why Game Plan"
+            title="Performance Facility, Not a Simulator Bar"
+            description="Franchise simulator bars rent you a screen. We coach you in person with the same technology used on the PGA Tour."
+          />
+
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+            {/* Simulator Bar column */}
+            <FadeIn>
+              <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-6 md:p-8">
+                <p className="text-brand-gray-500 text-sm font-semibold tracking-widest uppercase mb-6">
+                  At a Simulator Bar
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    "Self-guided simulator sessions",
+                    "No instructor in the bay with you",
+                    "Radar-based launch monitors",
+                    "No force plates or biomechanics",
+                    "No physical training program",
+                    "Franchise — same playbook everywhere",
+                    "Entertainment-first environment",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-brand-gray-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      <span className="text-brand-gray-400 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
+
+            {/* Game Plan column */}
+            <FadeIn delay={0.1}>
+              <div className="bg-brand-green/5 border border-brand-green/20 rounded-lg p-6 md:p-8">
+                <p className="text-brand-green text-sm font-semibold tracking-widest uppercase mb-6">
+                  At Game Plan
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    "Certified instructor coaching every session",
+                    "Swing Catalyst force plates — ground reaction data",
+                    "GC Quad optical launch monitor — tour-level accuracy",
+                    "High-speed video in every bay — even self-serve",
+                    "Golf-specific physical training (NASM + TPI)",
+                    "Locally owned — built for our members",
+                    "Professional environment — zero distractions",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-brand-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-brand-gray-200 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

@@ -9,6 +9,7 @@ const membership = {
   period: "/mo",
   features: [
     "Up to 2 hours of GC Quad bay time per day",
+    "High-speed video in every bay",
     "Up to 2 hours of private gym time per day",
     "Open 5:00 AM – 10:00 PM, every day",
     "Full launch monitor data",
@@ -55,8 +56,9 @@ export default function MembershipsPage() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="mt-6 text-lg md:text-xl text-brand-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Self-serve GC Quad bays. Open 5am to 10pm, every day. Pick the
-              plan that fits your schedule and your goals.
+              Self-serve GC Quad bays with high-speed video. Open 5am to 10pm,
+              every day. Real data on every shot — not just a screen and a
+              simulator.
             </p>
           </FadeIn>
         </div>
