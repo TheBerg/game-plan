@@ -145,6 +145,94 @@ export default function LessonsPage() {
         </div>
       </section>
 
+      {/* Instructors */}
+      <section className="py-20 md:py-28 bg-brand-darker">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Your Instructors"
+            title="Certified. Experienced. Data-Driven."
+            description="Every lesson at Game Plan is led by an instructor who is Swing Catalyst certified and equipped with force plate technology. This isn't a driving range lesson — it's a professional coaching session backed by tour-level data."
+          />
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-12">
+            {[
+              {
+                name: "Ryan Faust",
+                role: "Founder & Head Instructor",
+                image:
+                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+                /*
+                  [REPLACE] Image: Professional photo of Ryan Faust
+                  Aspect ratio: 3:4 (portrait)
+                  Alt: "Ryan Faust — Founder & Head Instructor"
+                */
+                bio: "Ryan built Game Plan around the belief that every golfer deserves access to tour-level coaching. A former competitive amateur turned instructor, he combines swing coaching expertise with athletic performance training — using data from every angle to build plans that actually stick.",
+                credentials: [
+                  "Swing Catalyst Ambassador & Level 2",
+                  "TPI Certified — Power 2 & Fitness 2",
+                  "NASM Certified Personal Trainer",
+                  "Mach 3 Speed Training Authorized",
+                ],
+              },
+              {
+                name: "Christian Chang",
+                role: "Instructor",
+                image:
+                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+                /*
+                  [REPLACE] Image: Professional photo of Christian Chang
+                  Aspect ratio: 3:4 (portrait)
+                  Alt: "Christian Chang — Instructor"
+                */
+                bio: "Christian brings professional playing experience to every lesson. After turning pro in 2016 and competing on the Mackenzie Tour (PGA Canada) and mini-tour circuits, he now channels that competitive edge into coaching — tailoring each session to the individual player's capabilities rather than forcing a one-size-fits-all swing.",
+                credentials: [
+                  "Swing Catalyst Level 2 Certified",
+                  "Former Professional Golfer",
+                  "Mackenzie Tour (PGA Canada)",
+                ],
+              },
+            ].map((instructor, i) => (
+              <FadeIn key={instructor.name} delay={0.1 * i}>
+                <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg overflow-hidden">
+                  <div className="relative aspect-[3/4] max-h-[400px]">
+                    <Image
+                      src={instructor.image}
+                      alt={`${instructor.name} — ${instructor.role}`}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-gray-950 via-brand-gray-950/40 to-transparent" />
+                    <div className="absolute bottom-4 left-5 right-5">
+                      <h3 className="font-heading text-2xl font-bold text-white">
+                        {instructor.name}
+                      </h3>
+                      <p className="text-brand-green text-sm font-semibold mt-1">
+                        {instructor.role}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-5 pt-4">
+                    <p className="text-brand-gray-300 text-sm leading-relaxed">
+                      {instructor.bio}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {instructor.credentials.map((cred) => (
+                        <span
+                          key={cred}
+                          className="bg-brand-dark border border-brand-gray-800 text-brand-gray-200 text-xs font-semibold px-3 py-1.5 rounded"
+                        >
+                          {cred}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Differentiation callout */}
       <section className="py-16 bg-brand-green/5 border-y border-brand-green/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
