@@ -2,7 +2,7 @@
 
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
-import { MEMBERSHIP_URL, BOOKING_URL } from "@/lib/constants";
+import { BOOKING_URL } from "@/lib/constants";
 
 const membership = {
   price: "$149",
@@ -100,11 +100,10 @@ export default function MembershipsPage() {
 
               <div className="mt-8">
                 <Button
-                  href={MEMBERSHIP_URL}
+                  href="/join"
                   variant="primary"
                   size="lg"
                   className="w-full"
-                  external
                 >
                   Become a Member
                 </Button>
@@ -223,7 +222,7 @@ export default function MembershipsPage() {
               data. That&apos;s practice with a purpose.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button href={MEMBERSHIP_URL} size="lg" external>
+              <Button href="/join" size="lg">
                 Choose Your Plan
               </Button>
               <Button href="/contact" variant="secondary" size="lg">

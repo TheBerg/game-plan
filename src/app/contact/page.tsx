@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import FadeIn from "@/components/FadeIn";
 import { HOURS, ADDRESS, PHONE, EMAIL, BOOKING_URL } from "@/lib/constants";
 import Button from "@/components/Button";
+import { submitInquiry } from "@/app/actions/inquiry";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -14,19 +15,21 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    /*
-      [REPLACE] Connect this form to your actual form handling:
-      Options:
-      - Formspree (add action URL to form)
-      - Netlify Forms (add netlify attribute)
-      - Custom API endpoint
-      - Email service (SendGrid, Resend, etc.)
-    */
-    console.log("Form submitted:", formState);
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    const formData = new FormData(e.currentTarget);
+    const result = await submitInquiry("contact", formData);
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      setError(result.error);
+    }
+    setLoading(false);
   }
 
   const inputClasses =
@@ -90,7 +93,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-5" noValidate>
                     <h2 className="font-heading text-xl font-bold text-white mb-2">
                       Send a Message
                     </h2>
@@ -118,6 +121,7 @@ export default function ContactPage() {
                         <input
                           type="text"
                           id="name"
+                          name="name"
                           required
                           className={inputClasses}
                           placeholder="Your name"
@@ -137,6 +141,7 @@ export default function ContactPage() {
                         <input
                           type="email"
                           id="email"
+                          name="email"
                           required
                           className={inputClasses}
                           placeholder="you@email.com"
@@ -165,6 +170,7 @@ export default function ContactPage() {
                         <input
                           type="tel"
                           id="phone"
+                          name="phone"
                           className={inputClasses}
                           placeholder="(555) 000-0000"
                           value={formState.phone}
@@ -185,6 +191,7 @@ export default function ContactPage() {
                         </label>
                         <select
                           id="interest"
+                          name="interest"
                           className={inputClasses}
                           value={formState.interest}
                           onChange={(e) =>
@@ -214,6 +221,7 @@ export default function ContactPage() {
                       </label>
                       <textarea
                         id="message"
+                        name="message"
                         rows={4}
                         className={inputClasses}
                         placeholder="Tell us about your goals, experience level, or any questions you have."
@@ -227,11 +235,16 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {error && (
+                      <p className="text-red-400 text-sm">{error}</p>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full bg-brand-green text-brand-dark font-semibold tracking-wide uppercase text-sm px-6 py-3 rounded hover:bg-brand-green-hover transition-colors active:scale-[0.98]"
+                      disabled={loading}
+                      className="w-full bg-brand-green text-brand-dark font-semibold tracking-wide uppercase text-sm px-6 py-3 rounded hover:bg-brand-green-hover transition-colors active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Send Message
+                      {loading ? "Sending…" : "Send Message"}
                     </button>
                   </form>
                 )}
