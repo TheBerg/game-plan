@@ -27,7 +27,7 @@ export async function submitInquiry(
 
   const rows = [
     `<tr><td style="padding:8px 0;color:#888;width:120px">Name</td><td style="padding:8px 0;color:#fff">${name}</td></tr>`,
-    `<tr><td style="padding:8px 0;color:#888">Email</td><td style="padding:8px 0;color:#fff"><a href="mailto:${email}" style="color:#2ecc71">${email}</a></td></tr>`,
+    `<tr><td style="padding:8px 0;color:#888">Email</td><td style="padding:8px 0;color:#fff"><a href="mailto:${email}" style="color:#127055">${email}</a></td></tr>`,
     phone ? `<tr><td style="padding:8px 0;color:#888">Phone</td><td style="padding:8px 0;color:#fff">${phone}</td></tr>` : "",
     interest ? `<tr><td style="padding:8px 0;color:#888">Interest</td><td style="padding:8px 0;color:#fff">${interest}</td></tr>` : "",
     message ? `<tr><td style="padding:8px 0;color:#888;vertical-align:top">Message</td><td style="padding:8px 0;color:#fff">${message.replace(/\n/g, "<br>")}</td></tr>` : "",
@@ -37,7 +37,7 @@ export async function submitInquiry(
 
   const html = `
     <div style="background:#0a0a0a;padding:32px;font-family:sans-serif;max-width:560px">
-      <p style="color:#2ecc71;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px">Game Plan Golf Performance</p>
+      <p style="color:#127055;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px">Game Plan Golf Performance</p>
       <h2 style="color:#fff;margin:0 0 24px;font-size:20px">${subject}</h2>
       <table style="width:100%;border-collapse:collapse;border-top:1px solid #222">${rows}</table>
     </div>

@@ -12,9 +12,9 @@ const config: Config = {
         brand: {
           dark: "#0A0F0D",
           darker: "#060906",
-          green: "#2ECC71",
-          "green-hover": "#27AE60",
-          "green-muted": "#1a7a43",
+          green: "#127055",
+          "green-hover": "#158f6e",
+          "green-muted": "#0d4a39",
           gray: {
             50: "#f7f7f7",
             100: "#e3e3e3",
