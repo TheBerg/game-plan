@@ -292,7 +292,7 @@ export default function Home() {
       {/* ─── Credibility Bar ─── */}
       <section className="bg-brand-gray-950 border-y border-brand-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-brand-gray-800">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-brand-gray-800">
             <CredBadge
               icon={
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -300,37 +300,34 @@ export default function Home() {
                 </svg>
               }
               label="Locally Owned"
-              sublabel="Small business, not a franchise"
+              sublabel="By Golfers"
               delay={0}
-            />
-            <CredBadge
-              icon={<span className="font-heading font-bold text-sm">F</span>}
-              label="Featured in Forbes"
-              sublabel="August 2025"
-              delay={0.05}
-            />
-            <CredBadge
-              icon={
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 21h8m-4-4v4m-4.5-8.25a8.5 8.5 0 009 0M6.75 3h10.5L18 6a6 6 0 01-12 0l.75-3z" />
-                </svg>
-              }
-              label="World Champion"
-              sublabel="Ultimate Long Drive"
-              delay={0.1}
             />
             <CredBadge
               icon={<CrosshairIcon />}
               label="GC Quad Technology"
-              sublabel="PGA Tour standard"
-              delay={0.15}
+              sublabel="PGA Tour Standard"
+              delay={0.05}
             />
             <CredBadge
               icon={<ActivityIcon />}
-              label="TPI Certified"
-              sublabel="Level 3 Golf · Level 2 Fitness & Power"
-              delay={0.2}
+              label="Swing Catalyst"
+              sublabel="3D Force Plate Analysis"
+              delay={0.1}
             />
+            <a
+              href="https://www.forbes.com/sites/scottkramer/2025/08/27/how-state-of-the-art-golf-tech-helped-remedy-my-swing-in-an-instant/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <CredBadge
+                icon={<span className="font-heading font-bold text-sm">F</span>}
+                label="Featured in Forbes"
+                sublabel="August 2025"
+                delay={0.15}
+              />
+            </a>
           </div>
         </div>
       </section>

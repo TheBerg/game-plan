@@ -128,20 +128,28 @@ export default function AboutPage() {
       <section className="py-16 md:py-20 bg-brand-green/5 border-y border-brand-green/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            {/* [REPLACE] Add actual Forbes logo image */}
-            <p className="font-heading text-3xl md:text-4xl font-bold text-white tracking-wide mb-4">
+            <a
+              href="https://www.forbes.com/sites/scottkramer/2025/08/27/how-state-of-the-art-golf-tech-helped-remedy-my-swing-in-an-instant/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-heading text-3xl md:text-4xl font-bold text-white tracking-wide mb-4 hover:opacity-80 transition-opacity block"
+            >
               Forbes
-            </p>
+            </a>
             <p className="text-brand-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
               Game Plan Golf Performance was featured by Scott Kramer in Forbes
               (August 2025) for its data-driven approach to golf coaching and
               its commitment to making tour-level technology accessible to
               everyday golfers.
             </p>
-            <p className="text-brand-gray-500 text-sm mt-4">
-              {/* [REPLACE] Add link to actual Forbes article */}
+            <a
+              href="https://www.forbes.com/sites/scottkramer/2025/08/27/how-state-of-the-art-golf-tech-helped-remedy-my-swing-in-an-instant/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-gray-500 text-sm mt-4 inline-block hover:text-brand-gray-300 transition-colors"
+            >
               Scott Kramer, Forbes — August 2025
-            </p>
+            </a>
           </FadeIn>
         </div>
       </section>

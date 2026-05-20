@@ -149,14 +149,18 @@ export default function Footer() {
             <p className="text-brand-gray-500 text-xs mt-3">
               Serving North County San Diego
             </p>
-            {/* [REPLACE] Add Forbes badge image here */}
             <div className="mt-6 pt-4 border-t border-brand-gray-800">
               <p className="text-brand-gray-500 text-xs uppercase tracking-wider">
                 As Featured In
               </p>
-              <p className="text-white font-heading font-bold text-lg mt-1 tracking-wide">
+              <a
+                href="https://www.forbes.com/sites/scottkramer/2025/08/27/how-state-of-the-art-golf-tech-helped-remedy-my-swing-in-an-instant/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-heading font-bold text-lg mt-1 tracking-wide hover:opacity-80 transition-opacity block"
+              >
                 Forbes
-              </p>
+              </a>
             </div>
           </div>
         </div>
