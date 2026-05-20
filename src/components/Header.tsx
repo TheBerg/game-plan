@@ -53,7 +53,7 @@ export default function Header() {
                 className={`px-3 py-2 text-sm font-medium transition-colors rounded ${
                   pathname === link.href
                     ? "text-brand-green"
-                    : "text-brand-gray-300 hover:text-white"
+                    : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -67,7 +67,7 @@ export default function Header() {
               href={MEMBER_LOGIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-brand-gray-300 hover:text-white transition-colors"
+              className="text-sm font-medium text-white/70 hover:text-white transition-colors"
             >
               Member Login
             </a>
@@ -128,7 +128,7 @@ export default function Header() {
                   className={`block px-3 py-3 text-base font-medium rounded transition-colors ${
                     pathname === link.href
                       ? "text-brand-green bg-white/5"
-                      : "text-brand-gray-300 hover:text-white hover:bg-white/5"
+                      : "text-white/70 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {link.label}
@@ -138,7 +138,7 @@ export default function Header() {
                 href={MEMBER_LOGIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-3 py-3 text-base font-medium text-brand-gray-300 hover:text-white hover:bg-white/5 rounded transition-colors"
+                className="block px-3 py-3 text-base font-medium text-white/70 hover:text-white hover:bg-white/5 rounded transition-colors"
               >
                 Member Login
               </a>
