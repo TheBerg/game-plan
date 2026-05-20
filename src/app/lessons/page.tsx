@@ -4,7 +4,6 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
-import { BOOKING_URL } from "@/lib/constants";
 
 const techStack = [
   {
@@ -327,7 +326,7 @@ export default function LessonsPage() {
               them.
             </p>
             <div className="mt-8">
-              <Button href={BOOKING_URL} size="lg" external>
+              <Button href="/lessons" size="lg">
                 Book Your First Lesson
               </Button>
             </div>

@@ -10,7 +10,7 @@ import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import { BOOKING_URL, CITIES_SERVED } from "@/lib/constants";
+import { CITIES_SERVED } from "@/lib/constants";
 
 /* ─── Icon components ─── */
 function TargetIcon({ className = "w-6 h-6" }: { className?: string }) {

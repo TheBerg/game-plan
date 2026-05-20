@@ -8,11 +8,11 @@ export const MEMBERSHIP_URL = "https://example.com/memberships"; // [REPLACE] Re
 export const MEMBER_LOGIN_URL = "https://clients.uschedule.com/gameplangolfperformance/account/login";
 
 export const ADDRESS = {
-  street: "", // [REPLACE] Add street address
+  street: "1621 S Rancho Santa Fe Rd Ste. H",
   city: "San Marcos",
   state: "CA",
-  zip: "", // [REPLACE] Add zip code
-  full: "San Marcos, CA",
+  zip: "92078",
+  full: "1621 S Rancho Santa Fe Rd Ste. H, San Marcos, CA 92078",
 };
 
 export const PHONE = ""; // [REPLACE] Add phone number
@@ -36,6 +36,8 @@ export const CITIES_SERVED = [
   "Escondido",
   "Rancho Santa Fe",
   "Solana Beach",
+  "San Diego",
+  "Del Mar",
 ];
 
 export const NAV_LINKS = [

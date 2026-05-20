@@ -2,7 +2,6 @@
 
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
-import { BOOKING_URL } from "@/lib/constants";
 
 const membership = {
   price: "$149",
@@ -134,7 +133,7 @@ export default function MembershipsPage() {
                 </p>
               </div>
               <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-6">
-                <p className="text-white font-semibold text-sm mb-2">No Parties Next Door</p>
+                <p className="text-white font-semibold text-sm mb-2">No Parties In The Bay Next Door</p>
                 <p className="text-brand-gray-400 text-sm leading-relaxed">
                   No simulator foursomes playing beer golf in the bay next to
                   you. When you&apos;re focused on improving, so is everyone
@@ -202,7 +201,7 @@ export default function MembershipsPage() {
               coaching for the fastest improvement.
             </p>
             <div className="mt-6">
-              <Button href={BOOKING_URL} variant="secondary" external>
+              <Button href="/lessons" variant="secondary">
                 Book a Lesson
               </Button>
             </div>
@@ -222,8 +221,8 @@ export default function MembershipsPage() {
               data. That&apos;s practice with a purpose.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button href="/join" size="lg">
-                Choose Your Plan
+              <Button href="/memberships" size="lg">
+                Become a Member
               </Button>
               <Button href="/contact" variant="secondary" size="lg">
                 Questions? Contact Us

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "./Button";
-import { NAV_LINKS, BOOKING_URL, MEMBER_LOGIN_URL } from "@/lib/constants";
+import { NAV_LINKS, MEMBER_LOGIN_URL } from "@/lib/constants";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

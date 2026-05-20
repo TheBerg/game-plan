@@ -8,7 +8,6 @@ import {
   SOCIAL,
   SITE_NAME,
   SITE_TAGLINE,
-  BOOKING_URL,
   MEMBER_LOGIN_URL,
 } from "@/lib/constants";
 
@@ -124,7 +123,15 @@ export default function Footer() {
               Contact
             </h3>
             <div className="space-y-2 text-sm">
-              <p className="text-brand-gray-400">{ADDRESS.full}</p>
+              <a
+                href="https://maps.google.com/?q=1621+S+Rancho+Santa+Fe+Rd+Ste+H+San+Marcos+CA+92078"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-gray-400 hover:text-white transition-colors"
+              >
+                <span className="block">{ADDRESS.street}</span>
+                <span className="block">{ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}</span>
+              </a>
               {PHONE && (
                 <p>
                   <a
@@ -146,7 +153,13 @@ export default function Footer() {
                 </p>
               )}
             </div>
-            <p className="text-brand-gray-500 text-xs mt-3">
+            <a
+              href="/contact"
+              className="inline-block mt-3 text-brand-green text-sm hover:underline"
+            >
+              Contact Us
+            </a>
+            <p className="text-brand-gray-500 text-xs mt-2">
               Serving North County San Diego
             </p>
             <div className="mt-6 pt-4 border-t border-brand-gray-800">

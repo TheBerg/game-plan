@@ -2,8 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import FadeIn from "@/components/FadeIn";
-import { HOURS, ADDRESS, PHONE, EMAIL, BOOKING_URL } from "@/lib/constants";
-import Button from "@/components/Button";
+import { HOURS, ADDRESS, PHONE, EMAIL } from "@/lib/constants";
 import { submitInquiry } from "@/app/actions/inquiry";
 
 export default function ContactPage() {
@@ -100,10 +99,15 @@ export default function ContactPage() {
                     <p className="text-brand-gray-400 text-sm mb-6">
                       Or skip the form and{" "}
                       <a
-                        href={BOOKING_URL}
+                        href="/memberships"
                         className="text-brand-green hover:underline"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      >
+                        become a member
+                      </a>
+                      {" "}or{" "}
+                      <a
+                        href="/lessons"
+                        className="text-brand-green hover:underline"
                       >
                         book directly online
                       </a>
@@ -187,9 +191,10 @@ export default function ContactPage() {
                           htmlFor="interest"
                           className="block text-sm font-medium text-brand-gray-300 mb-1.5"
                         >
-                          I&apos;m interested in
+                          Subject
                         </label>
-                        <select
+                        <input
+                          type="text"
                           id="interest"
                           name="interest"
                           className={inputClasses}
@@ -200,15 +205,8 @@ export default function ContactPage() {
                               interest: e.target.value,
                             })
                           }
-                        >
-                          <option value="">Select one</option>
-                          <option value="lessons">Lessons</option>
-                          <option value="membership">Practice Membership</option>
-                          <option value="training">Personal Training</option>
-                          <option value="sim-rental">SIM Rental</option>
-                          <option value="3d-screening">3D Movement Screening</option>
-                          <option value="other">Other</option>
-                        </select>
+                          placeholder="What can we help you with?"
+                        />
                       </div>
                     </div>
 
@@ -313,10 +311,15 @@ export default function ContactPage() {
                   <h3 className="font-heading text-lg font-bold text-white mb-4">
                     Location
                   </h3>
-                  <p className="text-brand-gray-300 text-sm">
-                    {ADDRESS.full}
-                    {/* [REPLACE] Add full street address when available */}
-                  </p>
+                  <a
+                    href="https://maps.google.com/?q=1621+S+Rancho+Santa+Fe+Rd+Ste+H+San+Marcos+CA+92078"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-gray-300 text-sm hover:text-white transition-colors"
+                  >
+                    <span className="block">{ADDRESS.street}</span>
+                    <span className="block">{ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}</span>
+                  </a>
                   {PHONE && (
                     <p className="text-brand-gray-300 text-sm mt-2">
                       Phone:{" "}
@@ -342,61 +345,6 @@ export default function ContactPage() {
                 </div>
               </FadeIn>
 
-              {/* Map placeholder */}
-              <FadeIn delay={0.25}>
-                <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg overflow-hidden">
-                  {/*
-                    [REPLACE] Embed Google Maps iframe here:
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=YOUR_EMBED_URL"
-                      width="100%"
-                      height="300"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Game Plan Golf Performance location"
-                    />
-                  */}
-                  <div className="h-[300px] flex items-center justify-center bg-brand-gray-900">
-                    <div className="text-center">
-                      <svg
-                        className="w-8 h-8 text-brand-gray-600 mx-auto mb-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                      <p className="text-brand-gray-500 text-sm">
-                        Google Maps embed
-                      </p>
-                      <p className="text-brand-gray-600 text-xs mt-1">
-                        {ADDRESS.full}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-
-              {/* Quick book */}
-              <FadeIn delay={0.3}>
-                <Button href={BOOKING_URL} size="lg" className="w-full" external>
-                  Book Online Now
-                </Button>
-              </FadeIn>
             </div>
           </div>
         </div>

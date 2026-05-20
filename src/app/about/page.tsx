@@ -4,7 +4,7 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
-import { BOOKING_URL, ADDRESS } from "@/lib/constants";
+import { ADDRESS } from "@/lib/constants";
 
 export default function AboutPage() {
   return (
@@ -273,7 +273,7 @@ export default function AboutPage() {
               Carlsbad to Escondido and everywhere in between.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button href={BOOKING_URL} size="lg" external>
+              <Button href="/lessons" size="lg">
                 Book a Session
               </Button>
               <Button href="/contact" variant="secondary" size="lg">
