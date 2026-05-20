@@ -100,7 +100,7 @@ export default function MembershipsPage() {
 
               <div className="mt-8">
                 <Button
-                  href="/join"
+                  href="https://clients.uschedule.com/gameplangolfperformance/Product/MembershipDetail/11359"
                   variant="primary"
                   size="lg"
                   className="w-full"

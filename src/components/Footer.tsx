@@ -86,9 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/lessons"
                   className="text-brand-green hover:text-brand-green-hover transition-colors text-sm font-semibold"
                 >
                   Book a Lesson

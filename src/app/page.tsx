@@ -249,7 +249,7 @@ export default function Home() {
               <Button href="/memberships" size="lg">
                 Become a Member
               </Button>
-              <Button href={BOOKING_URL} variant="secondary" size="lg" external>
+              <Button href="/lessons" variant="secondary" size="lg">
                 Book a Lesson
               </Button>
             </motion.div>
@@ -566,7 +566,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="mt-8">
-              <Button href={BOOKING_URL} size="lg" external>
+              <Button href="/lessons" size="lg">
                 Book Your First Session
               </Button>
             </div>

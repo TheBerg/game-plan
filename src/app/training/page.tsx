@@ -88,7 +88,7 @@ export default function TrainingPage() {
             </FadeIn>
             <FadeIn delay={0.3}>
               <div className="mt-8">
-                <Button href={BOOKING_URL} size="lg" external>
+                <Button href="#training-options" size="lg">
                   Book a Training Session
                 </Button>
               </div>
@@ -230,7 +230,7 @@ export default function TrainingPage() {
       </section>
 
       {/* Adult & Junior */}
-      <section className="py-20 md:py-28 bg-brand-dark">
+      <section id="training-options" className="py-20 md:py-28 bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <FadeIn>
@@ -263,6 +263,15 @@ export default function TrainingPage() {
                     </li>
                   ))}
                 </ul>
+                <a
+                  href="https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/37593"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 flex items-center justify-between bg-brand-dark border border-brand-gray-700 hover:border-brand-green text-white text-sm font-semibold px-4 py-2.5 rounded transition-colors"
+                >
+                  <span>8-Pack Fitness</span>
+                  <span className="text-brand-green">$1,000</span>
+                </a>
               </div>
             </FadeIn>
 
@@ -296,6 +305,15 @@ export default function TrainingPage() {
                     </li>
                   ))}
                 </ul>
+                <a
+                  href="https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/38151"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 flex items-center justify-between bg-brand-dark border border-brand-gray-700 hover:border-brand-green text-white text-sm font-semibold px-4 py-2.5 rounded transition-colors"
+                >
+                  <span>8-Pack Junior Fitness</span>
+                  <span className="text-brand-green">$800</span>
+                </a>
               </div>
             </FadeIn>
           </div>
@@ -314,7 +332,7 @@ export default function TrainingPage() {
               body needs to unlock the swing you&apos;re capable of.
             </p>
             <div className="mt-8">
-              <Button href={BOOKING_URL} size="lg" external>
+              <Button href="#training-options" size="lg">
                 Book a Screening
               </Button>
             </div>

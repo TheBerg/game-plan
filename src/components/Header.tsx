@@ -71,7 +71,7 @@ export default function Header() {
             >
               Member Login
             </a>
-            <Button href={BOOKING_URL} size="sm" external>
+            <Button href="/lessons" size="sm">
               Book a Lesson
             </Button>
           </div>
@@ -144,10 +144,9 @@ export default function Header() {
               </a>
               <div className="pt-3">
                 <Button
-                  href={BOOKING_URL}
+                  href="/lessons"
                   size="md"
                   className="w-full"
-                  external
                 >
                   Book a Lesson
                 </Button>

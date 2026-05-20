@@ -86,7 +86,7 @@ export default function LessonsPage() {
             </FadeIn>
             <FadeIn delay={0.3}>
               <div className="mt-8">
-                <Button href={BOOKING_URL} size="lg" external>
+                <Button href="#instructors" size="lg">
                   Book a Lesson
                 </Button>
               </div>
@@ -146,7 +146,7 @@ export default function LessonsPage() {
       </section>
 
       {/* Instructors */}
-      <section className="py-20 md:py-28 bg-brand-darker">
+      <section id="instructors" className="py-20 md:py-28 bg-brand-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Your Instructors"
@@ -158,64 +158,63 @@ export default function LessonsPage() {
             {[
               {
                 name: "Ryan Faust",
-                role: "Founder & Head Instructor",
-                image:
-                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-                /*
-                  [REPLACE] Image: Professional photo of Ryan Faust
-                  Aspect ratio: 3:4 (portrait)
-                  Alt: "Ryan Faust — Founder & Head Instructor"
-                */
+                role: "Founder & Head Golf Performance Coach",
                 bio: "Ryan built Game Plan around the belief that every golfer deserves access to tour-level coaching. A former competitive amateur turned instructor, he combines swing coaching expertise with athletic performance training — using data from every angle to build plans that actually stick.",
                 credentials: [
-                  "Swing Catalyst Ambassador & Level 2",
-                  "Swing Catalyst — Ground Reaction Force Certified",
-                  "TPI Level 3 Golf",
+                  "Swing Catalyst Ambassador",
+                  "Swing Catalyst Level 2 Certified",
                   "TPI Certified — Power 2 & Fitness 2",
                   "NASM Certified Personal Trainer",
-                  "Mach 3 Speed Training Authorized",
+                ],
+                lessons: [
+                  {
+                    label: "Adult Lesson",
+                    price: "$150",
+                    href: "https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/37304",
+                  },
+                  {
+                    label: "Junior Lesson",
+                    price: "$135",
+                    href: "https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/37311",
+                  },
                 ],
               },
               {
                 name: "Christian Chang",
-                role: "Instructor",
-                image:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
-                /*
-                  [REPLACE] Image: Professional photo of Christian Chang
-                  Aspect ratio: 3:4 (portrait)
-                  Alt: "Christian Chang — Instructor"
-                */
+                role: "Lead Instructor",
                 bio: "Christian grew up playing golf in San Diego before turning pro in 2016 and competing on the Mackenzie Tour (PGA Canada) and mini-tour circuits. He brings that competitive, data-informed edge to every lesson — tailoring each session to how the individual golfer moves and what they're working toward.",
                 credentials: [
                   "Swing Catalyst Level 2 Certified",
+                  "TPI Certified - Level 3 Golf",
                   "Former Professional Golfer",
-                  "Mackenzie Tour (PGA Canada)",
+                ],
+                lessons: [
+                  {
+                    label: "Adult Lesson",
+                    price: "$150",
+                    href: "https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/37304",
+                  },
+                  {
+                    label: "Junior Lesson",
+                    price: "$135",
+                    href: "https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/37311",
+                  },
+                  {
+                    label: "4-Pack Lessons",
+                    price: "$540",
+                    href: "https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/38022",
+                  },
                 ],
               },
             ].map((instructor, i) => (
               <FadeIn key={instructor.name} delay={0.1 * i}>
                 <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg overflow-hidden">
-                  <div className="relative aspect-[3/4] max-h-[400px]">
-                    <Image
-                      src={instructor.image}
-                      alt={`${instructor.name} — ${instructor.role}`}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-gray-950 via-brand-gray-950/40 to-transparent" />
-                    <div className="absolute bottom-4 left-5 right-5">
-                      <h3 className="font-heading text-2xl font-bold text-white">
-                        {instructor.name}
-                      </h3>
-                      <p className="text-brand-green text-sm font-semibold mt-1">
-                        {instructor.role}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="p-5 pt-4">
-                    <p className="text-brand-gray-300 text-sm leading-relaxed">
-                      {instructor.bio}
+                  <div className="p-5">
+                    <h3 className="font-heading text-2xl font-bold text-white">
+                      {instructor.name}
+                    </h3>
+                    <p className="text-brand-green text-sm font-semibold mt-1">
+                      {instructor.role}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {instructor.credentials.map((cred) => (
@@ -225,6 +224,23 @@ export default function LessonsPage() {
                         >
                           {cred}
                         </span>
+                      ))}
+                    </div>
+                    <p className="text-brand-gray-300 text-sm leading-relaxed mt-4">
+                      {instructor.bio}
+                    </p>
+                    <div className="mt-5 flex flex-col gap-2">
+                      {instructor.lessons.map((lesson) => (
+                        <a
+                          key={lesson.href}
+                          href={lesson.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between bg-brand-dark border border-brand-gray-700 hover:border-brand-green text-white text-sm font-semibold px-4 py-2.5 rounded transition-colors"
+                        >
+                          <span>{lesson.label}</span>
+                          <span className="text-brand-green">{lesson.price}</span>
+                        </a>
                       ))}
                     </div>
                   </div>

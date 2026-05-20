@@ -5,7 +5,7 @@ export const SITE_DESCRIPTION =
 
 export const BOOKING_URL = "https://example.com/book"; // [REPLACE] Replace with actual booking system URL
 export const MEMBERSHIP_URL = "https://example.com/memberships"; // [REPLACE] Replace with actual membership signup URL
-export const MEMBER_LOGIN_URL = "https://example.com/login"; // [REPLACE] Replace with actual member portal/login URL
+export const MEMBER_LOGIN_URL = "https://clients.uschedule.com/gameplangolfperformance/account/login";
 
 export const ADDRESS = {
   street: "", // [REPLACE] Add street address
