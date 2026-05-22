@@ -44,6 +44,5 @@ export const NAV_LINKS = [
   { label: "Memberships", href: "/memberships" },
   { label: "Lessons", href: "/lessons" },
   { label: "Training", href: "/training" },
-  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

@@ -1,5 +1,6 @@
 "use client";
 
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import SectionHeader from "@/components/SectionHeader";
@@ -7,6 +8,8 @@ import Button from "@/components/Button";
 import { ADDRESS } from "@/lib/constants";
 
 export default function AboutPage() {
+  notFound();
+
   return (
     <>
       {/* Hero */}
