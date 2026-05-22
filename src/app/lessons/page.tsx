@@ -11,36 +11,21 @@ const techStack = [
     description:
       "Quadrascopic optical cameras capture ball speed, launch angle, spin rate, spin axis, and club delivery data with tour-level precision. Unlike radar systems, GC Quad measures the ball directly — which means you can use your own gamer ball and get accurate, real-world numbers, not estimates calibrated to a range ball.",
     stat: "200+ data points per shot",
-    image: "https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80",
-    /*
-      [REPLACE] Image: Close-up of GC Quad unit or screen showing launch monitor data
-      Aspect ratio: 4:3
-      Alt: "GC Quad launch monitor displaying ball flight data"
-    */
+    image: "/images/gc-quad.png",
   },
   {
     title: "High-Speed Video Analysis",
     description:
       "Multiple camera angles capture your swing at high frame rates, revealing positions and transitions that are invisible in real time. Paired with drawing tools and overlay comparisons, you see exactly where your movement pattern diverges from your target positions.",
     stat: "Frame-by-frame breakdown",
-    image: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80",
-    /*
-      [REPLACE] Image: High-speed camera setup or split-screen swing comparison
-      Aspect ratio: 4:3
-      Alt: "High-speed video analysis of golf swing"
-    */
+    image: "/images/swing-catalyst-software.jpg",
   },
   {
     title: "Swing Catalyst Force Plates",
     description:
       "Swing Catalyst dual 3D force plates measure ground reaction forces throughout your swing — showing how you load, transfer, and deliver power from the ground up. This data connects your physical movement to your ball flight in a way that no camera can. It's technology you won't find at a simulator bar.",
     stat: "Ground reaction force mapping",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
-    /*
-      [REPLACE] Image: Golfer standing on force plates, or force plate data visualization
-      Aspect ratio: 4:3
-      Alt: "Force plate analysis during golf swing"
-    */
+    image: "/images/force-plates.jpg",
   },
 ];
 
@@ -55,7 +40,7 @@ export default function LessonsPage() {
             Aspect ratio: 16:9, full-bleed
           */}
           <Image
-            src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1920&q=80"
+            src="/images/foot-pressure-map.jpg"
             alt="Golf coaching session"
             fill
             className="object-cover"
