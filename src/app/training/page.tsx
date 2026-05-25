@@ -29,7 +29,7 @@ const process = [
     step: "01",
     title: "Assessment",
     description:
-      "We start with a full 3D movement screening and physical assessment. This identifies mobility restrictions, stability deficits, and strength imbalances that directly affect your swing mechanics and ball flight.",
+      "We start with a TPI Screening and physical assessment. This identifies mobility restrictions, stability deficits, and strength imbalances that directly affect your swing mechanics and ball flight.",
   },
   {
     step: "02",
@@ -181,13 +181,9 @@ export default function TrainingPage() {
 
             <FadeIn delay={0.2} direction="right">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                {/*
-                  [REPLACE] Image: Trainer working with golfer on functional movement
-                  Aspect ratio: 4:3
-                */}
                 <Image
-                  src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
-                  alt="Golf-specific athletic training session"
+                  src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80"
+                  alt="Athlete performing rotational exercise"
                   fill
                   className="object-cover"
                 />
@@ -327,11 +323,11 @@ export default function TrainingPage() {
               Your Swing Is Only as Good as Your Body Allows
             </h2>
             <p className="mt-4 text-lg text-brand-gray-300">
-              Start with a movement screening and find out exactly what your
+              Start with a TPI Screening and find out exactly what your
               body needs to unlock the swing you&apos;re capable of.
             </p>
             <div className="mt-8">
-              <Button href="#training-options" size="lg">
+              <Button href="https://clients.uschedule.com/gameplangolfperformance/Product/PrepayServiceDetail/42384" size="lg">
                 Book a Screening
               </Button>
             </div>

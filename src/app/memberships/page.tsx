@@ -9,10 +9,9 @@ const membership = {
   features: [
     "Unlimited GC Quad bay time — practice as much as you want",
     "High-speed video in every bay",
-    "Unlimited private gym access",
     "Open 5:00 AM – 10:00 PM, every day",
     "Full launch monitor data",
-    "Premium golf balls provided",
+    "Premium golf balls provided — or use your new gamer ball for even more accurate data for your game",
     "Fiberbuilt hitting mats — premium turf, regularly maintained",
     "Members only — private facility, no public walk-ins",
     "App-based booking & reservations",

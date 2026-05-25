@@ -396,11 +396,6 @@ export default function Home() {
                     title: "Swing Catalyst Force Plates",
                     desc: "Embedded force plates measure ground reaction forces throughout your swing — how you load, transfer, and deliver power from the ground up. Technology you won't find at a simulator bar.",
                   },
-                  {
-                    icon: <DumbbellIcon />,
-                    title: "3D Movement Screening",
-                    desc: "Full body mobility and stability assessment tied directly to your swing mechanics. Identifies physical limitations affecting your ball flight.",
-                  },
                 ].map((item, i) => (
                   <FadeIn key={item.title} delay={0.1 * i}>
                     <div className="flex gap-4 p-4 rounded-lg hover:bg-white/[0.02] transition-colors duration-300">
@@ -461,76 +456,6 @@ export default function Home() {
               image="/testimonials/steven-gordon.jpg"
               delay={0.2}
             />
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Why Game Plan ─── */}
-      <section className="py-20 md:py-28 bg-brand-darker">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            eyebrow="Why Game Plan"
-            title="Performance Facility, Not a Simulator Bar"
-            description="Franchise simulator bars rent you a screen. We coach you in person with the same technology used on the PGA Tour."
-          />
-
-          <div className="grid md:grid-cols-2 gap-6 mt-12">
-            {/* Simulator Bar column */}
-            <FadeIn>
-              <div className="bg-brand-gray-950 border border-brand-gray-800 rounded-lg p-6 md:p-8">
-                <p className="text-brand-gray-500 text-sm font-semibold tracking-widest uppercase mb-6">
-                  At a Simulator Bar
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Self-guided simulator sessions",
-                    "No instructor in the bay with you",
-                    "Radar-based launch monitors",
-                    "Radar monitors require special range balls — not your gamer ball",
-                    "No force plates or biomechanics",
-                    "No physical training program",
-                    "Franchise — same playbook everywhere",
-                    "Shared space — simulator foursomes and parties in the next bay",
-                    "Entertainment-first environment",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-brand-gray-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                      <span className="text-brand-gray-400 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </FadeIn>
-
-            {/* Game Plan column */}
-            <FadeIn delay={0.1}>
-              <div className="bg-brand-green/5 border border-brand-green/20 rounded-lg p-6 md:p-8">
-                <p className="text-brand-green text-sm font-semibold tracking-widest uppercase mb-6">
-                  At Game Plan
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Certified instructor coaching every session",
-                    "Swing Catalyst force plates — ground reaction data",
-                    "GC Quad optical monitor — use your own ball for real-world numbers",
-                    "High-speed video in every bay — even self-serve",
-                    "Fiberbuilt hitting mats — premium turf, regularly maintained and replaced",
-                    "Golf-specific physical training (NASM + TPI)",
-                    "Locally owned — owner is the head performance coach",
-                    "Members only — private community, no public walk-ins",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-brand-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-brand-gray-200 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </FadeIn>
           </div>
         </div>
       </section>

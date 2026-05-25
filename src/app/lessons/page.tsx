@@ -311,7 +311,7 @@ export default function LessonsPage() {
               them.
             </p>
             <div className="mt-8">
-              <Button href="/lessons" size="lg">
+              <Button href="#instructors" size="lg">
                 Book Your First Lesson
               </Button>
             </div>
