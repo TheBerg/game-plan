@@ -226,11 +226,14 @@ export default function LessonsPage() {
                     <p className="text-brand-gray-300 text-sm leading-relaxed mt-4">
                       {instructor.bio}
                     </p>
-                    <div className="mt-4 flex items-center gap-2 text-brand-gray-400 text-xs">
-                      <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <div className="mt-4 flex items-start gap-3 bg-brand-dark border border-brand-gray-700 rounded-lg px-4 py-3">
+                      <svg className="w-4 h-4 text-brand-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
-                      <span>Generally available: {instructor.availability}</span>
+                      <div>
+                        <p className="text-brand-gray-500 text-xs uppercase tracking-wider font-semibold">Generally Available</p>
+                        <p className="text-white text-sm mt-0.5">{instructor.availability}</p>
+                      </div>
                     </div>
                     <div className="mt-5 flex flex-col gap-2">
                       {instructor.lessons.map((lesson) => (
