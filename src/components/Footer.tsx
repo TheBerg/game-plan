@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  NAV_LINKS,
   FOOTER_LINKS,
   HOURS,
   ADDRESS,
