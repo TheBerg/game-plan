@@ -46,3 +46,8 @@ export const NAV_LINKS = [
   { label: "Training", href: "/training" },
   { label: "Contact", href: "/contact" },
 ];
+
+export const FOOTER_LINKS = [
+  ...NAV_LINKS,
+  { label: "How-To Videos", href: "/howto" },
+];

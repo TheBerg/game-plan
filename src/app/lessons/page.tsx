@@ -138,12 +138,24 @@ export default function LessonsPage() {
             description="Every lesson at Game Plan is led by an instructor who is Swing Catalyst certified and equipped with force plate technology. This isn't a driving range lesson — it's a professional coaching session backed by tour-level data."
           />
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-12">
+          <FadeIn delay={0.1}>
+            <div className="flex items-center justify-center gap-2 mb-10 bg-brand-green/10 border border-brand-green/30 rounded-lg px-5 py-3 max-w-sm mx-auto">
+              <svg className="w-4 h-4 text-brand-green shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <p className="text-brand-green text-sm font-semibold">
+                No membership required to book a lesson
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {[
               {
                 name: "Ryan Faust",
                 role: "Founder & Head Golf Performance Coach",
                 bio: "Ryan built Game Plan around the belief that every golfer deserves access to tour-level coaching. A former competitive amateur turned instructor, he combines swing coaching expertise with athletic performance training — using data from every angle to build plans that actually stick.",
+                availability: "Mon & Wed mornings · Tue & Thu afternoons",
                 credentials: [
                   "Swing Catalyst Ambassador",
                   "Swing Catalyst Level 2 Certified",
@@ -167,6 +179,7 @@ export default function LessonsPage() {
                 name: "Christian Chang",
                 role: "Lead Instructor",
                 bio: "Christian grew up playing golf in San Diego before turning pro in 2016 and competing on the Mackenzie Tour (PGA Canada) and mini-tour circuits. He brings that competitive, data-informed edge to every lesson — tailoring each session to how the individual golfer moves and what they're working toward.",
+                availability: "Mon & Wed afternoons · Thu mornings · Fri & Sat 8am–4pm",
                 credentials: [
                   "Swing Catalyst Level 2 Certified",
                   "TPI Certified - Level 3 Golf",
@@ -213,6 +226,12 @@ export default function LessonsPage() {
                     <p className="text-brand-gray-300 text-sm leading-relaxed mt-4">
                       {instructor.bio}
                     </p>
+                    <div className="mt-4 flex items-center gap-2 text-brand-gray-400 text-xs">
+                      <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <span>Generally available: {instructor.availability}</span>
+                    </div>
                     <div className="mt-5 flex flex-col gap-2">
                       {instructor.lessons.map((lesson) => (
                         <a

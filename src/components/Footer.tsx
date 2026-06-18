@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   NAV_LINKS,
+  FOOTER_LINKS,
   HOURS,
   ADDRESS,
   PHONE,
@@ -63,7 +64,7 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
+              {FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
